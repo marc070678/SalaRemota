@@ -20,6 +20,17 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHsts();
+}
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.XContentTypeOptions = "nosniff";
+    await next();
+});
+
 app.UseExceptionHandler(exceptionHandlerApp =>
 {
     exceptionHandlerApp.Run(async context =>
@@ -28,7 +39,10 @@ app.UseExceptionHandler(exceptionHandlerApp =>
         var logger = context.RequestServices.GetRequiredService<ILoggerFactory>()
             .CreateLogger("GlobalExceptionHandler");
 
-        logger.LogError(exception, "Unhandled server error. TraceId: {TraceId}", context.TraceIdentifier);
+        logger.LogError(
+            "Unhandled server error of type {ExceptionType}. TraceId: {TraceId}",
+            exception?.GetType().FullName ?? "Unknown",
+            context.TraceIdentifier);
 
         var problem = new ProblemDetails
         {
