@@ -13,5 +13,5 @@ Criar fundação documental e técnica segura do Sala Remota.
 - [x] PRE-006 Criar Definition of Done e estratégia de testes.
 - [x] TASK-001 Criar fundação técnica .NET + Next.js + testes.
 - [x] SEC-001 Validar configuração de segredos, erros e logging.
-- [ ] TEST-001 Validar builds e health endpoint.
+- [x] TEST-001 Validar builds e health endpoint.
 - [ ] DOC-001 Atualizar arquitetura após criação real da solução.
