@@ -1,0 +1,44 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+secrets.*
+
+# .NET
+bin/
+obj/
+.vs/
+*.user
+
+# Node
+node_modules/
+.npm-cache/
+.next/
+dist/
+coverage/
+
+# IDE/OS
+.vscode/*.local.json
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+.vs/
+bin/
+obj/
+TestResults/
+coverage/
+node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.Local.json
+*.user
+*.suo

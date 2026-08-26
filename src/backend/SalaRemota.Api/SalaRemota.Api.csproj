@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\SalaRemota.Application\SalaRemota.Application.csproj" />
+    <ProjectReference Include="..\SalaRemota.Infrastructure\SalaRemota.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

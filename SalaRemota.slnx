@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/backend/">
+    <Project Path="src/backend/SalaRemota.Api/SalaRemota.Api.csproj" />
+    <Project Path="src/backend/SalaRemota.Application/SalaRemota.Application.csproj" />
+    <Project Path="src/backend/SalaRemota.Domain/SalaRemota.Domain.csproj" />
+    <Project Path="src/backend/SalaRemota.Infrastructure/SalaRemota.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SalaRemota.Api.IntegrationTests/SalaRemota.Api.IntegrationTests.csproj" />
+    <Project Path="tests/SalaRemota.ArchitectureTests/SalaRemota.ArchitectureTests.csproj" />
+  </Folder>
+</Solution>
